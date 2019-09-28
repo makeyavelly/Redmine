@@ -208,7 +208,7 @@ void saveListIntIntoFile(const QList<int> &list, const QString &fileName)
     QFile file(fileName);
     if (file.open(QFile::WriteOnly)) {
         foreach (int project, list) {
-            file.write(QString("%1\n").arg(project).toAscii());
+            file.write(QString("%1\n").arg(project).toLocal8Bit());
         }
     }
     file.close();

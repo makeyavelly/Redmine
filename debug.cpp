@@ -6,12 +6,12 @@
 
 void print(const QString &message)
 {
-    std::cout << message.toAscii().constData() << std::endl;
+    std::cout << message.toLocal8Bit().constData() << std::endl;
 }
 
 void printError(const QString &error)
 {
-    std::cerr << "[ERROR]: " << error.toAscii().constData() << std::endl;
+    std::cerr << "[ERROR]: " << error.toLocal8Bit().constData() << std::endl;
 }
 
 

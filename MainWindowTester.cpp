@@ -375,7 +375,7 @@ void MainWindowTester::slotAddTest()
 {
     QDate date = QDate::currentDate();
     QString name = QString("Тестирование от %1").arg(date.toString(FORMAT_DATE));
-    int id = Sql::createTask(_testProject, TrackTest, name, st_TaskNew, user().id, user().id);
+    int id = Sql::createTask(_testProject, TrackTest, name, st_TaskNew, user().id, 0);
     Sql::setTaskLevel(id, ui->comboLevel->itemData(_defaultLevel).toString());
 
     QTableWidget *table = ui->tableTest;
